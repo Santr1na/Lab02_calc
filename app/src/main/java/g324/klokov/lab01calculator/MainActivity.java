@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
+import android.view.textclassifier.TextClassifierEvent;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         Root = findViewById(R.id.Root);
         Pow = findViewById(R.id.Pow);
+        
 
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
