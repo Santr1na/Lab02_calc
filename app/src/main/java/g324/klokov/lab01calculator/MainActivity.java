@@ -124,7 +124,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     double num = Double.parseDouble(number_3.getText().toString());
-                    result_2.setText(String.valueOf("Result: "+Math.sin(num)));
+                    double num1 = Math.toRadians(num);
+                    result_2.setText(String.valueOf("Result: "+Math.sin(num1)));
                 }
                 catch (Exception e)
                 {
@@ -139,7 +140,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     double num = Double.parseDouble(number_3.getText().toString());
-                    result_2.setText(String.valueOf("Result: "+Math.cos(num)));
+                    double num1 = Math.toRadians(num);
+                    result_2.setText(String.valueOf("Result: "+Math.cos(num1)));
                 }
                 catch (Exception e)
                 {
@@ -153,7 +155,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     double num = Double.parseDouble(number_3.getText().toString());
-                    result_2.setText(String.valueOf("Result: "+Math.tan(num)));
+                    double num1 = Math.toRadians(num);
+                    result_2.setText(String.valueOf("Result: "+Math.tan(num1)));
                 }
                 catch (Exception e)
                 {
@@ -167,7 +170,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     double num = Double.parseDouble(number_4.getText().toString());
-                    result_3.setText(String.valueOf("Result: "+Math.sqrt(num)));
+                    if (num >= 0) {
+                        result_3.setText(String.valueOf("Result: " + Math.sqrt(num)));
+                    }
+                    else {
+                        result_3.setText(String.valueOf("Result: Error!"));
+                    }
                 }
                 catch (Exception e)
                 {
